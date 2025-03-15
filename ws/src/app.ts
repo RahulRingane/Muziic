@@ -139,6 +139,7 @@ async function handleUserAction(ws: WebSocket, type: string, data: Data) {
   const user = RoomManager.getInstance().users.get(data.userId);
 
   if (user) {
+    console.log(user);
     data.userId = user.userId;
     await processUserAction(type, data);
   } else {

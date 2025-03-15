@@ -54,6 +54,7 @@ export default function Queue({ queue, isCreator, creatorId, userId,spaceId }: P
   const emptyQueue = async () => {
     sendMessage("empty-queue", {
       spaceId:spaceId,
+      userId: creatorId
     });
     setIsEmptyQueueDialogOpen(false);
   };
